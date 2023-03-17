@@ -1,6 +1,6 @@
 #include <string>
 using namespace std;
-
+#define NUMS_LETTER 26
 class Trie {
 public:
   class TrieNode;
@@ -47,13 +47,12 @@ public:
     
     class TrieNode {
     public:
-        TrieNode **child;
+        TrieNode *child[NUMS_LETTER];
         bool endofwords;
     public:
         TrieNode() {
-            child = new TrieNode*[26];
-            for (int i = 0; i < 26; i++) {
-                child[i] = NULL;
+            for (int i = 0; i < NUMS_LETTER; i++) {
+                child[i] = nullptr;
             }
             endofwords = false;
         }
