@@ -1,4 +1,4 @@
-//Problem: https://leetcode.com/problems/longest-cycle-in-a-graph/description/
+/problem: https://leetcode.com/problems/longest-cycle-in-a-graph/description/
 //
 class Solution {
 public:
@@ -22,7 +22,7 @@ public:
         for (int i = 0; i < n; i++) {
             if (!visited[i]) {
                 unordered_map<int, int> dist;
-                dist[i] = 0;
+                dist[i] = 1;
                 dfs(i, visited, edges, ans, dist);
             }
         }
